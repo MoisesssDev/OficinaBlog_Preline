@@ -5,6 +5,7 @@
         Create your article
       </h2>
     </div>
+    
 
     <div class="mt-5 p-4 relative z-10 bg-white border rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
       <%= form_with model: @article, local: true do |form| %>
@@ -14,8 +15,12 @@
         </div>
 
         <div class="mb-4 sm:mb-8">
-          <%= form.label :article_image, class: "block mb-2 text-sm font-medium dark:text-white" %>
-          <%= form.file_field :article_image %>
+          <%= form.label :article_image, 'Choose image', class: "block mb-2 text-sm font-medium dark:text-white" %>
+          <%= form.file_field :article_image, class: "block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400
+              file:bg-gray-50 file:border-0
+              file:me-4
+              file:py-3 file:px-4
+              dark:file:bg-neutral-700 dark:file:text-neutral-400" %>
         </div>
 
         <div>
