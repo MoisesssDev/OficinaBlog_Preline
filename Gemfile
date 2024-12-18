@@ -28,3 +28,7 @@ end
 gem "tailwindcss-rails", "~> 3.0"
 
 gem "devise", "~> 4.9"
+
+gem "activestorage"
+
+gem "image_processing", ">= 1.2"
