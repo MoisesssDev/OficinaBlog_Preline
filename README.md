@@ -1,24 +1,34 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# OficinaBlog
 
-Things you may want to cover:
+OficinaBlog é uma aplicação de blog desenvolvida em Ruby on Rails que permite a criação, edição e visualização de artigos. Este projeto também suporta uploads de imagens e edição de texto com o Action Text e o Trix Editor.
 
-* Ruby version
 
-* System dependencies
+## Configuração do Projeto
 
-* Configuration
 
-* Database creation
+1. Clone o repositório:
+```bash
+  git clone https://github.com/seu-usuario/oficinablog.git
+  cd oficinablog
+```
+    
+2. Instale as dependências do projeto:
+```
+  bundle install
+```
 
-* Database initialization
+3. Instale as dependências JavaScript:
+```
+  yarn install
+```
 
-* How to run the test suite
+4. Configure o banco de dados:
+```
+  bin/rails db:create db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. Inicie o servidor:
+```
+  bin/dev
+```
