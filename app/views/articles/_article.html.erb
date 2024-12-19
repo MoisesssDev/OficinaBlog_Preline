@@ -12,7 +12,7 @@
       <%= truncate(article.content.to_plain_text, lenght: 45) %>
     </p>
 
-    <div class="mt-3 flex flex-wrap gap-2">
+    <div class="mt-3 flex flex-wrap gap-2 hidden sm:flex">
       <% if article.tags.present?%>
         <% tags_formatted = article.tags.split(", ") %>
         <%= render 'articles/tags', tags: tags_formatted %>
@@ -21,4 +21,3 @@
   </div>
   
 <% end %>
-<!-- End Card -->
