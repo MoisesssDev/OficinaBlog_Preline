@@ -10,8 +10,8 @@
           </div>
 
           <figure>
-            <% if @article.article_image.attached? %>
-              <%= image_tag @article.article_image, class: "w-full object-cover rounded-xl" %>
+            <% if @article.header_image.attached? %>
+              <%= image_tag @article.header_image, class: "w-full object-cover rounded-xl" %>
             <% end %>
           </figure>
 
