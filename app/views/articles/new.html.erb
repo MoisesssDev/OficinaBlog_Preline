@@ -1,5 +1,5 @@
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <div class="mx-auto max-w-2xl">
+  <div class="mx-auto max-w-4xl">
     <div class="text-center">
       <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white">
         Create your article
@@ -24,15 +24,8 @@
         </div>
 
         <div class="mb-4 sm:mb-8">
-          <%= form.label :body %>
-          <%= form.rich_text_area :body, class: "block w-full" %>
-        </div>
-
-        <div>
-          <%= form.label :content, class: "block mb-2 text-sm font-medium dark:text-white" %>
-          <div class="mt-1">
-            <%= form.text_area :content, class: "py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" %>
-          </div>
+          <%= form.label :content, 'Write your article', class: "block mb-2 text-sm font-medium dark:text-white" %>
+          <%= form.rich_text_area :content, class: "py-3 min-h-44 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" %>
         </div>
 
         <div class="mt-6 grid">
