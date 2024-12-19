@@ -1,0 +1,24 @@
+<%= link_to article_path(article), class: "group flex flex-col focus:outline-none" do %>
+  <div class="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-2xl dark:bg-neutral-800">
+    <% if article.article_image.persisted? %>
+      <%= image_tag article.article_image, class: "group-hover:scale-105 w-full group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl" %>
+    <% end %>
+  </div>
+  <div class="pt-4">
+    <h3 class="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">
+      <%= article.title %>
+    </h3>
+    <p class="mt-1 text-gray-600 dark:text-neutral-400">
+      <%= truncate(article.content.to_plain_text, lenght: 45) %>
+    </p>
+
+    <div class="mt-3 flex flex-wrap gap-2">
+      <% if article.tags.present?%>
+        <% tags_formatted = article.tags.split(", ") %>
+        <%= render 'articles/tags', tags: tags_formatted %>
+      <% end %>
+    </div>
+  </div>
+  
+<% end %>
+<!-- End Card -->
