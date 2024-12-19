@@ -15,6 +15,12 @@
         </div>
 
         <div class="mb-4 sm:mb-8">
+          <%= form.label :tags, 'Related tags to your article', class: "block mb-2 text-sm font-medium dark:text-white" %>
+          <%= form.text_field :tags, class: "py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600", placeholder: 'Workshop, Education, Lifestyle' %>
+          <small>(*) As tags devem ser separadas por vírgula. </small>
+        </div>
+
+        <div class="mb-4 sm:mb-8">
           <%= form.label :article_image, 'Choose image', class: "block mb-2 text-sm font-medium dark:text-white" %>
           <%= form.file_field :article_image, class: "block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400
               file:bg-gray-50 file:border-0

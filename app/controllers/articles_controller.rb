@@ -14,11 +14,13 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+
+    @tags = @article.tags.split(", ") if @article.tags
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:title, :content, :article_image)
+    params.require(:article).permit(:title, :content, :article_image, :tags)
   end
 end

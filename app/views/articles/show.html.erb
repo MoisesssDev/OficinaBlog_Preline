@@ -4,7 +4,7 @@
     <div class="flex justify-between items-center mb-6">
       <div class="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
     <!-- Content -->
-        <div class="space-y-5 md:space-y-8">
+        <div class="w-full mt-8 space-y-5 md:space-y-8">
           <div class="space-y-3">
             <h2 class="text-2xl font-bold md:text-3xl dark:text-white"><%= @article.title %></h2>
           </div>
@@ -17,20 +17,9 @@
 
           <p class="text-lg text-gray-800 dark:text-neutral-200"><%= @article.content %></p>
 
-          <div>
-            <a class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-              Plan
-            </a>
-            <a class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-              Web development
-            </a>
-            <a class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-              Free
-            </a>
-            <a class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-              Team
-            </a>
-          </div>
+          <% if @article.tags %>
+            <%= render 'tags', tags: @tags %>
+          <% end %>
         </div>
         <!-- End Content -->
       </div>
