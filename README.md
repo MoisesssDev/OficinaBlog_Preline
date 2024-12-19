@@ -9,7 +9,7 @@ OficinaBlog é uma aplicação de blog desenvolvida em Ruby on Rails que permite
 
 1. Clone o repositório:
 ```bash
-  git clone https://github.com/seu-usuario/oficinablog.git
+  git clone https://github.com/MoisesssDev/OficinaBlog_Preline
   cd oficinablog
 ```
     
