@@ -23,6 +23,11 @@
               dark:file:bg-neutral-700 dark:file:text-neutral-400" %>
         </div>
 
+        <div class="mb-4 sm:mb-8">
+          <%= form.label :body %>
+          <%= form.rich_text_area :body, class: "block w-full" %>
+        </div>
+
         <div>
           <%= form.label :content, class: "block mb-2 text-sm font-medium dark:text-white" %>
           <div class="mt-1">
