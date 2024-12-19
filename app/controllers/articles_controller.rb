@@ -18,6 +18,10 @@ class ArticlesController < ApplicationController
     @tags = @article.tags.split(", ") if @article.tags
   end
 
+  def index
+    @articles = Article.all.order("created_at DESC")
+  end
+
   private
 
   def article_params
