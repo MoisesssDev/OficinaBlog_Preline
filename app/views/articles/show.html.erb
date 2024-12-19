@@ -17,7 +17,7 @@
 
           <div class="text-lg text-gray-800 dark:text-gray-200"><%= @article.content %></div>
 
-          <div class="mt-8">
+          <div class="mt-8 flex gap-2">
             <% if @article.tags %>     
               <%= render 'tags', tags: @tags %>
             <% end %>
