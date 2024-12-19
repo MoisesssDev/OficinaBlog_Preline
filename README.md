@@ -23,6 +23,11 @@ OficinaBlog é uma aplicação de blog desenvolvida em Ruby on Rails que permite
   yarn install
 ```
 
+4. Compile com ESbuild:
+```
+  yarn build
+```
+
 4. Configure o banco de dados:
 ```
   bin/rails db:create db:migrate
