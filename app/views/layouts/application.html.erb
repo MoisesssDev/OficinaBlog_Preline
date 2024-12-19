@@ -16,7 +16,7 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
-
+    
   </head>
 
   <body>
@@ -99,5 +99,7 @@
 
       <%= yield %>
     </main>
+
+    <script src="./node_modules/preline/dist/preline.js"></script>
   </body>
 </html>
