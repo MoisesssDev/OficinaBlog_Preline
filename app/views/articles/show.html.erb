@@ -17,9 +17,11 @@
 
           <div class="text-lg text-gray-800 dark:text-gray-200"><%= @article.content %></div>
 
-          <% if @article.tags %>
-            <%= render 'tags', tags: @tags %>
-          <% end %>
+          <div class="mt-8">
+            <% if @article.tags %>     
+              <%= render 'tags', tags: @tags %>
+            <% end %>
+          </div>
         </div>
         <!-- End Content -->
       </div>
